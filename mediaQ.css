@@ -1,0 +1,20 @@
+@media screen and (max-width:752px) {
+    main> .images{
+        justify-content: center;
+    }
+    main>.images>img{
+        transform: rotate(-50deg);
+    }
+    main>.images>img:hover{
+        transform: rotate(0deg);
+        box-shadow: 5px 5px 10px yellow;
+    }
+    main>.images>img:active{
+        border-image:url("seamless-black-and-white-square-pattern-design-vector-13196836.jpg") 30  stretch;
+    }
+
+
+    main>.paragraphs>p>span{
+        background-color: blue;
+    }
+}

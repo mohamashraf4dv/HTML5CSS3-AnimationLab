@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.main-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width:80%;
+    height:90vh;
+    display: flex;
+    border:5px inset yellowgreen;
+    border-radius: 10px;
+    margin:30px 0px;
+    background: radial-gradient(white 10% , cyan 50%);
+    transition:2s;
+    box-shadow: 10px 10px 20px cyan;
+    transition: 3s;
+    animation-play-state: paused;
+
+}
+main> .paragraphs{
+    border:solid 3px black;
+    margin:10px;
+    width:30%;
+    overflow-x: scroll;
+    border-radius: 10px;
+    padding:20px;
+    background: radial-gradient( white 10%, rgb(45, 227, 45) 60%);
+}
+main>.paragraphs>p{
+    column-count: 3;
+    column-width: 50px;
+    column-rule: 3px solid brown;
+
+}
+main>.paragraphs>p>span{
+    background-color: brown;
+    transition:1s;
+}
+main> .images{
+width:70%;
+display: flex;
+flex-wrap: wrap;
+overflow-y: scroll;
+border:3px solid blue;
+margin:10px;
+border-radius: 10px;
+background: radial-gradient(white 40% , cyan );
+
+}
+main>.images>img{
+    width:150px ;
+    height: 200px;
+    margin:20px;
+    border:3px solid blue ;
+    box-shadow: 0 10px 10px blueviolet;
+    transition: 1000ms;
+}
+
+main:hover{
+    transform: skew(10deg);
+}
+main>.images>img:hover{
+    transform:scale(1.5);
+    border-color: rgb(86, 86, 226);
+    box-shadow: 0 10px 10px yellow;
+}
+main>.images>img:active{
+    transform:scale(2.5);
+    border:none;
+    box-shadow: 10px 10px 20px red;
+}
+
+main>.paragraphs>p>span:hover{
+    box-shadow: 0px -5px 10px inset yellow;
+}
+
+main:active{
+    animation: mainAnimation 3s ease-in-out infinite alternate  ;
+}
+
+
+
+
+@keyframes mainAnimation {
+    0%{
+
+    }
+    100%{
+    transform: scale(0.4);
+    background: radial-gradient(white 10%,yellow 50% );
+    }
+    
+}
+
